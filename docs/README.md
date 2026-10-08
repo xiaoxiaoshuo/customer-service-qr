@@ -26,13 +26,13 @@ npx --yes serve .
 仓库已包含 `.nojekyll`，站点位于仓库的 `site/` 目录。
 
 在仓库 **Settings → Pages** 中把 Source 设为 *Deploy from a branch*，
-分支选 `main`，目录选 `/site`，保存后等待一两分钟即可通过
+分支选 `main`，目录选 `/docs`，保存后等待一两分钟即可通过
 `https://<用户名>.github.io/customer-service-qr/` 访问。
 
 ## 目录结构
 
 ```
-site/
+docs/
 ├── index.html                 # 页面结构
 ├── styles.css                 # 主题与响应式布局
 ├── app.js                     # 复制链接、保存二维码、悬浮按钮
