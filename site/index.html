@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b1220" />
+    <meta name="description" content="扫码添加云龙虾客服-售后微信，获取一对一售后支持。" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>添加云龙虾客服 · 售后支持</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307c160'/%3E%3Cg fill='%23fff'%3E%3Crect x='14' y='14' width='12' height='12' rx='2'/%3E%3Crect x='38' y='14' width='12' height='12' rx='2'/%3E%3Crect x='14' y='38' width='12' height='12' rx='2'/%3E%3Crect x='32' y='32' width='6' height='6'/%3E%3Crect x='44' y='32' width='6' height='6'/%3E%3Crect x='32' y='44' width='6' height='6'/%3E%3Crect x='44' y='44' width='6' height='6'/%3E%3C/g%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#qr-panel">跳到二维码</a>
+
+    <div class="aurora" aria-hidden="true">
+      <span class="aurora__blob aurora__blob--green"></span>
+      <span class="aurora__blob aurora__blob--blue"></span>
+      <span class="aurora__blob aurora__blob--warm"></span>
+      <span class="aurora__grid"></span>
+    </div>
+
+    <header class="topbar">
+      <div class="shell topbar__inner">
+        <div class="brand">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 5.5h5.2v5.2H4zM14.8 5.5H20v5.2h-5.2zM4 13.3h5.2V20H4z" />
+              <path d="M14.8 13.3h2.4v2.4h-2.4zM17.6 17.6H20V20h-2.4z" />
+            </svg>
+          </span>
+          <span class="brand__text">
+            <strong>云龙虾 · 客服中心</strong>
+            <em>扫码添加售后微信</em>
+          </span>
+        </div>
+
+        <nav class="topbar__nav" aria-label="页面导航">
+          <a href="#qr-panel">二维码</a>
+          <a href="#steps">扫码步骤</a>
+          <a href="#faq">常见问题</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__copy">
+          <span class="pill">
+            <i class="pill__dot" aria-hidden="true"></i>
+            售后一对一 · 微信扫码即通
+          </span>
+          <h1 id="hero-title">
+            扫码添加 <span class="grad">云龙虾客服</span><br />
+            售后问题即刻响应
+          </h1>
+          <p class="hero__lead">
+            打开微信“扫一扫”，对准<span class="hero__lead-side">右侧</span>二维码即可添加专属售后客服。
+            订单查询、使用咨询、故障处理与技术答疑，都可以直接沟通。
+          </p>
+
+          <ul class="hero__points">
+            <li><span aria-hidden="true">✓</span> 一对一人工客服，非机器人应答</li>
+            <li><span aria-hidden="true">✓</span> 支持手机、平板与电脑端扫码</li>
+            <li><span aria-hidden="true">✓</span> 服务时间 09:00 – 22:00（含周末）</li>
+          </ul>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#qr-panel">立即扫码添加</a>
+            <a class="btn btn--ghost" href="./customer-service-qr.jpg" download="customer-service-qr.jpg" id="save-qr">
+              保存二维码到本地
+            </a>
+          </div>
+
+          <p class="hero__hint" id="save-hint" role="status" aria-live="polite"></p>
+        </div>
+
+        <div class="hero__card" id="qr-panel">
+          <div class="qr-card">
+            <div class="qr-card__head">
+          <span class="qr-card__avatar" aria-hidden="true">
+                <img src="./customer-service-qr.jpg" alt="" width="888" height="1128" decoding="async" />
+              </span>
+              <span class="qr-card__name">
+                <strong>云龙虾客服-售后</strong>
+                <em>微信二维码 · 扫码添加</em>
+              </span>
+            </div>
+
+            <div class="qr-card__frame">
+              <img
+                class="qr-card__img"
+                src="./customer-service-qr.jpg"
+                alt="云龙虾客服-售后 的微信二维码，扫码即可添加好友"
+                width="888"
+                height="1128"
+                decoding="async"
+              />
+              <span class="qr-card__corner qr-card__corner--tl" aria-hidden="true"></span>
+              <span class="qr-card__corner qr-card__corner--tr" aria-hidden="true"></span>
+              <span class="qr-card__corner qr-card__corner--bl" aria-hidden="true"></span>
+              <span class="qr-card__corner qr-card__corner--br" aria-hidden="true"></span>
+            </div>
+
+            <p class="qr-card__tip">扫二维码，添加我为朋友</p>
+
+            <div class="qr-card__actions">
+              <button class="btn btn--primary btn--block" type="button" id="copy-link">
+                复制本页链接
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="steps" aria-labelledby="steps-title">
+        <header class="block__head">
+          <h2 id="steps-title">三步完成添加</h2>
+          <p>手机与电脑端操作略有差异，按下方说明即可。</p>
+        </header>
+
+        <div class="grid grid--3">
+          <article class="card">
+            <span class="card__index">01</span>
+            <h3>打开扫一扫</h3>
+            <p>微信右上角「+」→「扫一扫」；电脑端可使用微信内置扫一扫窗口，或用手机相机扫描屏幕上的二维码。</p>
+          </article>
+          <article class="card">
+            <span class="card__index">02</span>
+            <h3>对准二维码</h3>
+            <p>将取景框对准本页二维码，保持光线充足、屏幕亮度适中，识别距离约 15–30 厘米最佳。</p>
+          </article>
+          <article class="card">
+            <span class="card__index">03</span>
+            <h3>添加并说明问题</h3>
+            <p>点击「添加到通讯录」，通过后直接描述你的问题，附上订单号或截图可以更快定位。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="block block--split" aria-labelledby="support-title">
+        <div class="support">
+          <h2 id="support-title">我们可以帮你解决</h2>
+          <p class="support__lead">售后客服覆盖下单到使用的全流程问题。</p>
+          <ul class="support__list">
+            <li><strong>订单与物流</strong><span>订单查询、修改与售后进度跟进</span></li>
+            <li><strong>产品使用</strong><span>功能说明、配置指导与操作答疑</span></li>
+            <li><strong>故障处理</strong><span>异常排查、退换货与补偿方案</span></li>
+            <li><strong>发票与开票</strong><span>发票申请、抬头变更与补开</span></li>
+          </ul>
+        </div>
+
+        <div class="note-card">
+          <h3>扫码前的小提醒</h3>
+          <ul>
+            <li>二维码长期有效，无需重复保存。</li>
+            <li>请通过微信官方 App 扫码，勿使用第三方“通用扫码器”。</li>
+            <li>客服不会索要支付密码、验证码或转账，谨防冒充诈骗。</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="block" id="faq" aria-labelledby="faq-title">
+        <header class="block__head">
+          <h2 id="faq-title">常见问题</h2>
+          <p>扫码过程中遇到问题，先看这里。</p>
+        </header>
+
+        <div class="faq">
+          <details open>
+            <summary>二维码扫不出来怎么办？</summary>
+            <p>先把屏幕亮度调高、撕掉贴膜反光层，或把二维码保存到相册后，在微信「扫一扫」右上角选择「相册」识别。</p>
+          </details>
+          <details>
+            <summary>在企业微信 / 钉钉里能扫吗？</summary>
+            <p>该二维码是个人微信好友码，需要用微信 App 扫描。其他应用扫码可能无法跳转到添加页面。</p>
+          </details>
+          <details>
+            <summary>加了客服一直没有通过？</summary>
+            <p>客服在 09:00 – 22:00 内会逐一处理，高峰期可能延迟，请耐心等待；紧急问题可再次发送消息提醒。</p>
+          </details>
+          <details>
+            <summary>可以让别人代扫吗？</summary>
+            <p>可以。把本页链接分享给同事，对方用微信扫码添加后说明情况即可，售后会核对订单信息。</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell footer__inner">
+        <p>© <span id="year">2026</span> 云龙虾 · 客服中心</p>
+        <p class="footer__note">本页仅用于展示售后微信二维码，扫码添加不收取任何费用。</p>
+      </div>
+    </footer>
+
+    <a class="fab" href="#qr-panel" id="fab" aria-label="回到二维码">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M4 5.5h5.2v5.2H4zM14.8 5.5H20v5.2h-5.2zM4 13.3h5.2V20H4z" />
+        <path d="M14.8 13.3h2.4v2.4h-2.4zM17.6 17.6H20V20h-2.4z" />
+      </svg>
+      <span>扫码</span>
+    </a>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
