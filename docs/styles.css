@@ -469,21 +469,19 @@ button {
 
 .qr-card__avatar {
   flex: 0 0 auto;
+  display: grid;
+  place-items: center;
   width: 46px;
   height: 46px;
   border-radius: 13px;
-  overflow: hidden;
-  border: 1px solid var(--line-strong);
-  background: #0b0f20;
+  border: 1px solid var(--brand-line);
+  background: var(--brand-soft);
+  color: #c4b5fd;
 }
 
-.qr-card__avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 12%;
-  transform: scale(2.9);
-  transform-origin: 24% 12%;
+.qr-card__avatar svg {
+  width: 26px;
+  height: 26px;
 }
 
 .qr-card__name {
@@ -505,17 +503,20 @@ button {
 
 .qr-card__frame {
   position: relative;
-  margin-top: 18px;
-  padding: 12px;
+  width: min(100%, 344px);
+  margin: 20px auto 0;
   border-radius: 20px;
   background: #ffffff;
   box-shadow: inset 0 0 0 1px rgba(11, 18, 32, 0.06);
 }
 
 .qr-card__img {
+  /* 图片已自带扫码静区，保持方形原比例，不再裁切或叠加内边距。 */
   width: 100%;
   height: auto;
-  border-radius: 12px;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: inherit;
   background: #fff;
 }
 
@@ -888,10 +889,6 @@ button {
   .qr-card {
     padding: 18px 18px 16px;
     border-radius: 22px;
-  }
-
-  .qr-card__frame {
-    padding: 10px;
   }
 
   .grid--3 {

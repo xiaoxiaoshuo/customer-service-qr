@@ -8,7 +8,7 @@
     <meta name="format-detection" content="telephone=no" />
     <title>添加云龙虾客服 · 售后支持</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307c160'/%3E%3Cg fill='%23fff'%3E%3Crect x='14' y='14' width='12' height='12' rx='2'/%3E%3Crect x='38' y='14' width='12' height='12' rx='2'/%3E%3Crect x='14' y='38' width='12' height='12' rx='2'/%3E%3Crect x='32' y='32' width='6' height='6'/%3E%3Crect x='44' y='32' width='6' height='6'/%3E%3Crect x='32' y='44' width='6' height='6'/%3E%3Crect x='44' y='44' width='6' height='6'/%3E%3C/g%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=20261010" />
   </head>
   <body>
     <a class="skip-link" href="#qr-panel">跳到二维码</a>
@@ -67,7 +67,7 @@
 
           <div class="hero__cta">
             <a class="btn btn--primary" href="#qr-panel">立即扫码添加</a>
-            <a class="btn btn--ghost" href="./customer-service-qr.jpg" download="customer-service-qr.jpg" id="save-qr">
+            <a class="btn btn--ghost" href="./customer-service-qr.jpg?v=20261010" download="customer-service-qr.jpg" id="save-qr">
               保存二维码到本地
             </a>
           </div>
@@ -78,8 +78,14 @@
         <div class="hero__card" id="qr-panel">
           <div class="qr-card">
             <div class="qr-card__head">
-          <span class="qr-card__avatar" aria-hidden="true">
-                <img src="./customer-service-qr.jpg" alt="" width="888" height="1128" decoding="async" />
+              <span class="qr-card__avatar" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 13v-1a8 8 0 0 1 16 0v1" />
+                  <rect x="3" y="11" width="4" height="7" rx="2" />
+                  <rect x="17" y="11" width="4" height="7" rx="2" />
+                  <path d="M19 18v1a2 2 0 0 1-2 2h-3" />
+                  <path d="M11 21h3" />
+                </svg>
               </span>
               <span class="qr-card__name">
                 <strong>云龙虾客服-售后</strong>
@@ -90,10 +96,10 @@
             <div class="qr-card__frame">
               <img
                 class="qr-card__img"
-                src="./customer-service-qr.jpg"
+                src="./customer-service-qr.jpg?v=20261010"
                 alt="云龙虾客服-售后 的微信二维码，扫码即可添加好友"
-                width="888"
-                height="1128"
+                width="640"
+                height="640"
                 decoding="async"
               />
               <span class="qr-card__corner qr-card__corner--tl" aria-hidden="true"></span>
@@ -102,7 +108,7 @@
               <span class="qr-card__corner qr-card__corner--br" aria-hidden="true"></span>
             </div>
 
-            <p class="qr-card__tip">扫二维码，添加我为朋友</p>
+            <p class="qr-card__tip">微信扫一扫，或长按保存图片</p>
 
             <div class="qr-card__actions">
               <button class="btn btn--primary btn--block" type="button" id="copy-link">
@@ -173,7 +179,7 @@
           </details>
           <details>
             <summary>在企业微信 / 钉钉里能扫吗？</summary>
-            <p>该二维码是个人微信好友码，需要用微信 App 扫描。其他应用扫码可能无法跳转到添加页面。</p>
+            <p>建议使用微信 App 扫码添加客服；如果在其他应用中无法识别或跳转，请保存二维码后，在微信「扫一扫」中选择相册识别。</p>
           </details>
           <details>
             <summary>加了客服一直没有通过？</summary>
