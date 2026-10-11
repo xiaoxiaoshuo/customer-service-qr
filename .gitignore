@@ -12,3 +12,15 @@ Desktop.ini
 # 依赖与构建产物（本项目为纯静态，一般用不到）
 node_modules/
 dist/
+
+# OSS 发布快照、备份与校验记录
+.deploy-artifacts/
+
+# 云凭据与本地环境配置（禁止提交）
+.ossutilconfig
+.ossutilconfig.*
+.ossutil/
+.ossutil_output/
+.aliyun/
+.env
+.env.*

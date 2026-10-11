@@ -12,6 +12,21 @@
 python -m http.server 8080 --directory docs
 ```
 
+## 部署
+
+- 正式网站（阿里云 OSS）：<https://www.denuoxuankeji.com/>
+- GitHub Pages：<https://xiaoxiaoshuo.github.io/customer-service-qr/>
+- [OSS 部署教程](DEPLOY_OSS.md)：现有环境、凭据准备、升级步骤、验收和回滚。
+- [OSS 部署脚本](scripts/deploy-oss.ps1)：默认预演，传入 `-Apply` 才会备份并发布四个网站文件。
+
+```powershell
+# 在仓库根目录执行，网站改动需先提交。
+.\scripts\deploy-oss.ps1
+.\scripts\deploy-oss.ps1 -Apply
+```
+
+**推送 GitHub 不会自动更新 OSS**，两套发布目前需要分别执行；详细流程见[部署教程](DEPLOY_OSS.md)。
+
 ## 主要特性
 
 - PC 左右分栏 / 手机单列，自动适配，无横向溢出

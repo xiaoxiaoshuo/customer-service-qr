@@ -23,11 +23,17 @@ npx --yes serve .
 
 ## 部署到 GitHub Pages
 
-仓库已包含 `.nojekyll`，站点位于仓库的 `site/` 目录。
+仓库已包含 [.nojekyll](.nojekyll)，站点位于仓库的 [docs/](../docs/) 目录。
 
 在仓库 **Settings → Pages** 中把 Source 设为 *Deploy from a branch*，
 分支选 `main`，目录选 `/docs`，保存后等待一两分钟即可通过
 `https://<用户名>.github.io/customer-service-qr/` 访问。
+
+## 部署到阿里云 OSS
+
+正式网站：<https://www.denuoxuankeji.com/>。
+
+完整的升级、备份、验证与回滚步骤见仓库根目录的 [OSS 部署教程](../DEPLOY_OSS.md)，发布使用 [PowerShell 脚本](../scripts/deploy-oss.ps1)。GitHub Pages 发布与 OSS 更新相互独立。
 
 ## 目录结构
 
