@@ -8,7 +8,7 @@
     <meta name="format-detection" content="telephone=no" />
     <title>添加云龙虾客服 · 售后支持</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307c160'/%3E%3Cg fill='%23fff'%3E%3Crect x='14' y='14' width='12' height='12' rx='2'/%3E%3Crect x='38' y='14' width='12' height='12' rx='2'/%3E%3Crect x='14' y='38' width='12' height='12' rx='2'/%3E%3Crect x='32' y='32' width='6' height='6'/%3E%3Crect x='44' y='32' width='6' height='6'/%3E%3Crect x='32' y='44' width='6' height='6'/%3E%3Crect x='44' y='44' width='6' height='6'/%3E%3C/g%3E%3C/svg%3E" />
-    <link rel="stylesheet" href="./styles.css?v=20261010" />
+    <link rel="stylesheet" href="./styles.css?v=20261015-mobile-v1" />
   </head>
   <body>
     <a class="skip-link" href="#qr-panel">跳到二维码</a>
@@ -65,6 +65,34 @@
             <li><span aria-hidden="true">✓</span> 服务时间 09:00 – 22:00（含周末）</li>
           </ul>
 
+          <section class="desktop-download" id="desktop-download" aria-labelledby="download-title" hidden>
+            <div class="desktop-download__heading">
+              <span class="desktop-download__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3v12m-4-4 4 4 4-4M5 16v4h14v-4" />
+                </svg>
+              </span>
+              <h2 id="download-title">下载云枢 Claw <span>桌面版</span></h2>
+            </div>
+            <p class="desktop-download__status" id="download-status" role="status" aria-live="polite">请选择与你电脑对应的版本。</p>
+            <a class="btn btn--primary desktop-download__primary" id="download-primary" href="#download-platform" aria-describedby="download-status">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 3v12m-4-4 4 4 4-4M5 16v4h14v-4" />
+              </svg>
+              <span id="download-label">选择版本后下载</span>
+            </a>
+            <div class="desktop-download__choice">
+              <label for="download-platform">识别不准？手动选择</label>
+              <select id="download-platform" aria-describedby="download-help">
+                <option value="">请选择系统 / Mac 芯片</option>
+                <option value="windows-x64" data-label="下载 Windows 64 位版" data-detail="Windows x64 · v0.1.18 · ZIP 完整包" data-url="https://alioss.denuoxuankeji.com/yunshu-claw-codex-updates/windows/0.1.18/builds/20261013-2037/YunshuClaw-0.1.18-windows-x64-full.zip">Windows 64 位 · v0.1.18（ZIP 完整包）</option>
+                <option value="mac-arm64" data-label="下载 Mac 版（Apple 芯片）" data-detail="macOS Apple 芯片 · v0.1.5 · DMG" data-url="https://alioss.denuoxuankeji.com/yunshu-claw-codex-updates/mac/0.1.5/%E4%BA%91%E6%9E%A2Claw-0.1.5-mac-arm64.dmg">Mac Apple 芯片 · v0.1.5（M 系列）</option>
+                <option value="mac-x64" data-label="下载 Mac 版（Intel 芯片）" data-detail="macOS Intel 芯片 · v0.1.5 · DMG" data-url="https://alioss.denuoxuankeji.com/yunshu-claw-codex-updates/mac/0.1.5/%E4%BA%91%E6%9E%A2Claw-0.1.5-mac-x64.dmg">Mac Intel 芯片 · v0.1.5（x64）</option>
+              </select>
+            </div>
+            <p class="desktop-download__help" id="download-help">Mac 芯片可在苹果菜单 →「关于本机」中查看。选择版本后，点击下载按钮开始下载。</p>
+          </section>
+
           <div class="hero__cta">
             <a class="btn btn--primary" href="#qr-panel">立即扫码添加</a>
             <a class="btn btn--ghost" href="./customer-service-qr.jpg?v=20261010" download="customer-service-qr.jpg" id="save-qr">
@@ -77,6 +105,10 @@
 
         <div class="hero__card" id="qr-panel">
           <div class="qr-card">
+            <div class="activation-intro mobile-only">
+              <p class="activation-intro__brand">云枢 Claw · 软件激活</p>
+              <h1 id="activation-title">添加微信，激活软件</h1>
+            </div>
             <div class="qr-card__head">
               <span class="qr-card__avatar" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -106,6 +138,27 @@
               <span class="qr-card__corner qr-card__corner--tr" aria-hidden="true"></span>
               <span class="qr-card__corner qr-card__corner--bl" aria-hidden="true"></span>
               <span class="qr-card__corner qr-card__corner--br" aria-hidden="true"></span>
+            </div>
+
+            <div class="activation-guide mobile-only">
+              <p class="activation-guide__press" id="activation-press"><span aria-hidden="true">↑</span> 在微信内长按二维码识别</p>
+              <ol class="activation-steps" aria-label="软件激活步骤">
+                <li>
+                  <span class="activation-steps__number" aria-hidden="true">1</span>
+                  <div><strong>添加微信联系人</strong><p>识别后点击「添加到通讯录」</p></div>
+                </li>
+                <li>
+                  <span class="activation-steps__number" aria-hidden="true">2</span>
+                  <div><strong>发送 <em>「激活软件」</em></strong><p>通过后，客服协助完成激活</p></div>
+                </li>
+              </ol>
+              <details class="activation-help">
+                <summary>不在微信内，或长按没反应？</summary>
+                <p>先保存二维码，再打开微信右上角「+」→「扫一扫」→ 从相册选择这张图片识别。</p>
+                <a class="btn btn--ghost" id="mobile-save-qr" href="./customer-service-qr.jpg?v=20261010" download="customer-service-qr.jpg">保存二维码图片</a>
+                <p class="activation-help__status" id="mobile-save-hint" role="status" aria-live="polite"></p>
+              </details>
+              <p class="activation-guide__note">人工客服协助 · 服务时间 09:00 – 22:00</p>
             </div>
 
             <p class="qr-card__tip">微信扫一扫，或长按保存图片</p>
@@ -208,6 +261,6 @@
       <span>扫码</span>
     </a>
 
-    <script src="./app.js" defer></script>
+    <script src="./app.js?v=20261015-mobile-v1" defer></script>
   </body>
 </html>

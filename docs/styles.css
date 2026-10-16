@@ -930,6 +930,316 @@ button {
   }
 }
 
+/* ---------- 桌面客户端下载：样式不作用于原移动端 ---------- */
+.desktop-download {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .desktop-download:not([hidden]) {
+    display: block;
+    margin-top: 26px;
+    padding: 20px;
+    border: 1px solid var(--brand-line);
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, rgba(91, 91, 214, 0.15), rgba(24, 29, 54, 0.7));
+  }
+
+  .desktop-download__heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .desktop-download__icon {
+    display: grid;
+    place-items: center;
+    flex: 0 0 34px;
+    height: 34px;
+    border-radius: 10px;
+    color: #c9c6ff;
+    background: var(--brand-soft);
+  }
+
+  .desktop-download svg {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 auto;
+  }
+
+  .desktop-download h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+  }
+
+  .desktop-download h2 span {
+    padding: 3px 7px;
+    border-radius: 6px;
+    background: var(--brand-soft);
+    color: #b9b5ff;
+    font-size: 11px;
+    font-weight: 500;
+  }
+
+  .desktop-download__status {
+    margin-top: 10px;
+    color: var(--text-soft);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .desktop-download__primary {
+    width: 100%;
+    margin-top: 14px;
+    padding: 12px 16px;
+  }
+
+  .desktop-download__choice {
+    margin-top: 14px;
+  }
+
+  .desktop-download__choice label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--text-soft);
+    font-size: 12px;
+  }
+
+  .desktop-download__choice select {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 10px 12px;
+    border: 1px solid var(--line-strong);
+    border-radius: 9px;
+    background: var(--bg-soft);
+    color: var(--text);
+    color-scheme: dark;
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  .desktop-download__help {
+    margin-top: 9px;
+    color: var(--text-dim);
+    font-size: 11.5px;
+    line-height: 1.6;
+  }
+}
+
+/* ---------- 移动端激活首屏：桌面布局不受影响 ---------- */
+.mobile-only {
+  display: none;
+}
+
+.is-mobile-activation {
+  scroll-padding-top: 16px;
+}
+
+.is-mobile-activation .topbar,
+.is-mobile-activation .hero__copy,
+.is-mobile-activation .qr-card__head,
+.is-mobile-activation .qr-card__tip,
+.is-mobile-activation .qr-card__actions,
+.is-mobile-activation .qr-card__corner,
+.is-mobile-activation .qr-card::after,
+.is-mobile-activation main > .block,
+.is-mobile-activation .footer,
+.is-mobile-activation .fab {
+  display: none;
+}
+
+.is-mobile-activation .mobile-only {
+  display: block;
+}
+
+.is-mobile-activation main.shell {
+  width: 100%;
+  max-width: 460px;
+  padding: max(20px, env(safe-area-inset-top)) 20px max(20px, env(safe-area-inset-bottom));
+}
+
+.is-mobile-activation .hero {
+  display: block;
+  padding: 0;
+}
+
+.is-mobile-activation .hero__card {
+  display: block;
+  scroll-margin-top: 16px;
+}
+
+.is-mobile-activation .qr-card {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  animation: none;
+}
+
+.is-mobile-activation .activation-intro {
+  text-align: center;
+}
+
+.activation-intro__brand {
+  color: #aaa7cd;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+
+.is-mobile-activation .hero h1 {
+  margin-top: 7px;
+  font-size: clamp(23px, 6.2vw, 28px);
+  line-height: 1.35;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+}
+
+.is-mobile-activation .qr-card__frame {
+  width: min(76vw, 292px);
+  max-width: 100%;
+  margin: 16px auto 0;
+  padding: 0;
+  border-radius: 18px;
+  box-shadow: 0 16px 40px -24px rgba(111, 96, 255, 0.65);
+}
+
+.is-mobile-activation .qr-card__img {
+  /* Keep the real, unmodified image and native WeChat long-press handling. */
+  -webkit-touch-callout: default;
+  -webkit-user-select: auto;
+  user-select: auto;
+  touch-action: auto;
+}
+
+.activation-guide {
+  margin: 14px auto 0;
+  max-width: 340px;
+}
+
+.activation-guide__press {
+  text-align: center;
+  color: #b8f5d5;
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.activation-guide__press span {
+  margin-right: 5px;
+}
+
+.activation-steps {
+  display: grid;
+  gap: 13px;
+  margin: 16px 0 0;
+  padding: 15px;
+  list-style: none;
+  border: 1px solid var(--brand-line);
+  border-radius: 16px;
+  background: rgba(35, 34, 65, 0.65);
+}
+
+.activation-steps li {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+}
+
+.activation-steps__number {
+  display: grid;
+  place-items: center;
+  flex: 0 0 24px;
+  height: 24px;
+  margin-top: 1px;
+  border-radius: 50%;
+  background: var(--brand-soft);
+  color: #c9c6ff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.activation-steps strong {
+  display: block;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.activation-steps em {
+  color: #c9c2ff;
+  font-style: normal;
+}
+
+.activation-steps p {
+  margin-top: 2px;
+  color: var(--text-soft);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.activation-help {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-soft);
+}
+
+.activation-help summary {
+  display: list-item;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 8px 3px;
+  cursor: pointer;
+}
+
+.activation-help > p {
+  margin-top: 8px;
+  text-align: left;
+  line-height: 1.7;
+}
+
+.activation-help .btn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 11px 16px;
+  font-size: 13px;
+}
+
+.activation-help__status:empty {
+  display: none;
+}
+
+.activation-guide__note {
+  margin-top: 10px;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 11px;
+}
+
+@media (max-height: 650px) {
+  .is-mobile-activation main.shell {
+    padding-top: max(12px, env(safe-area-inset-top));
+  }
+
+  .is-mobile-activation .qr-card__frame {
+    width: min(69vw, 242px);
+    margin-top: 12px;
+  }
+
+  .is-mobile-activation .activation-guide {
+    margin-top: 10px;
+  }
+
+  .is-mobile-activation .activation-steps {
+    margin-top: 10px;
+    padding: 12px;
+    gap: 9px;
+  }
+}
+
 @media print {
   body {
     background: #fff;
